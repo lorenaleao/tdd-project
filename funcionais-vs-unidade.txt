@@ -1,0 +1,19 @@
+Testes Funcionais dirigem o desenvolvimento em alto nível -- a nível de
+funcionalidade, enquanto Testes de Unidade focam em um nível mais baixo -- a
+nível de uma unidade de código. Em outras palavras, Testes Funcionais são
+escritos considerando-se a perpectiva do usuário, enquanto Testes de Unidade são
+pensados a partir da perspectiva dos programadores. 
+
+Testes Funcionais ajudam a construir uma aplicação com funcionalidades corretas,
+isto é, de acordo com os que os usuários esperam, enquanto Testes de Unidade
+ajudam a escrever código limpo e sem bug, isto é, garantem que os métodos e
+classes implementadas funcionem corretamente e sejam de qualidade do ponto de
+vista de manutenibilidade, legibilidade, etc.
+
+Além disso, Testes de Unidade devem seguir os princípios FIRST -- devem ser
+rápidos (Fast), independentes (Independent/Isolated), determinísticos
+(Repeatable), auto-verificáveis (Self-checking) e escritos o quanto antes
+(Timely). Testes Funcionais, por outro lado, por execitarem uma funcionalidade
+completa do sistema, envolvem dependências e sistemas reais, como bancos de
+dados e serviços remotos. Por isso, demoram mais tempo e são mais complicados de
+serem escritos.

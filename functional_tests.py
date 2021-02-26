@@ -24,7 +24,7 @@ class NewVisitorTest(unittest.TestCase):
         self.assertEqual(inputbox.get_attribute('placeholder'), 'Enter a to-do item')
 
         # Ela digita "Estudar testes funcionais" em uma caixa de texto
-        inputbox = send_keys('Estudar testes funcionais')
+        inputbox.send_keys('Estudar testes funcionais')
 
         # Quando ela aperta enter, a página atualiza, e mostra a lista
         # "1: Estudar testes funcionais" como um item da lista TODO
@@ -33,7 +33,9 @@ class NewVisitorTest(unittest.TestCase):
 
         table = self.browser.find_element_by_id('id_list_table')
         rows = table.find_elements_by_tag_name('tr')
-        self.assertTrue(any(row.text == '1: Estudar testes funcionais' for row in rows))
+        self.assertTrue(
+                any(row.text == '1: Estudar testes funcionais' for row in rows), 
+                "New to-do item did not appear in table")
 
         # Ainda existe uma caixa de texto convidando para adicionar outro item
         # Ela digita: "Estudar testes de unidade"

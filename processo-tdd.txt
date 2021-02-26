@@ -1,0 +1,27 @@
+De forma geral, o processo TDD consiste nos seguintes passos: 
+
+	- escrever o teste, 
+	- rodar o teste e verificar se falha, 
+	- se falhar, escrever algum código da aplicação,
+	- rodar o teste novamente e repetir até passar, 
+	- se for necessário, refatorar o código, utilizando sempre o teste para
+	  garantir que nada foi quebrado.
+
+Utilizando-se Testes Funcionais e Testes de Unidade, esse fluxo de trabalho se
+torna um pouco mais complexo e consiste nos seguintes passos:
+
+	- escrever um teste funcional,
+	- rodar o teste funcional e verificar se falha, 
+	- se passar, refatorar o código se for necessaŕio,
+	- se falhar, escrever um código mínimo para que passe:
+		- escrever um teste de unidade,
+		- rodar o teste de unidade e verificar se falha,
+		- se falhar, escrever um código mímino para que passe,
+		- rodar o teste novamente e repetir até passar,
+		- se for necessário, refatorar o código, utilizando sempre o
+		  teste para garantir que nada foi quebrado
+	- rodar o teste funcional novamente e repetir todo o processo acima até
+	  passar, 
+	- se for necessário, refatorar o código, utilizando sempre o teste para 
+	garantir que nada foi quebrado.
+

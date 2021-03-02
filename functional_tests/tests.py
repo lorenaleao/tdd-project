@@ -82,10 +82,10 @@ class NewVisitorTest(LiveServerTestCase):
         self.browser = webdriver.Firefox()
 
         # João visita a página inicial. Não existe nenhum sinal da lista de Maria
-        self.browser.get(self.live_browser_url)
+        self.browser.get(self.live_server_url)
         page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('1: Estudar testes funcionais', page_text)
-        self.assertNotIn('2: Estudar testes de unidade')
+        self.assertNotIn('2: Estudar testes de unidade', page_text)
 
         # João inicia uma nova lista
         inputbox = self.browser.find_element_by_id('id_new_item')

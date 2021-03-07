@@ -32,4 +32,10 @@ class SendLoginEmailViewTest(TestCase):
         self.assertEqual(
             mock_messages.success.call_args,
             call(response.wsgi_request, expected),
-            )
+        )
+
+class LoginViewTest(TestCase):
+
+    def test_redirects_to_home_page(self):
+        response = self.client.get('/accounts/login?token=abcd123')
+        self.assertRedirects(response, '/')
